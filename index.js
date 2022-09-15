@@ -1,9 +1,9 @@
 const productos = [
-    { nombre: "cuerina", precio: 2300 },
+    { nombre: "cuerina ", precio: 2300 },
     { nombre: "vinilo ", precio: 1250 },
-    { nombre: "lona front", precio: 1150 },
-    { nombre: "lona back", precio: 1500 },
-    { nombre: "lona Bo", precio: 1250 },
+    { nombre: "lona front ", precio: 1150 },
+    { nombre: "lona back ", precio: 1500 },
+    { nombre: "lona Bo ", precio: 1250 },
 ];
 
 let carrito = []
@@ -51,7 +51,7 @@ while(seleccion != "no"){
         let unidadades = parseInt(prompt("cuantas quiere"))
 
 
-        carrito.push({ producto, unidadades, precio, })
+        carrito.push({ producto, unidadades, precio })
         console.log(carrito)
     } else {
         alert("no tenemos ese produto")
@@ -65,9 +65,12 @@ while(seleccion != "no"){
         })
      break;
     }
+  
 }
-const total = carrito.reduce((acc, el) => acc + el.precio * el.unidadades, 0)
-console.log(`el total es: ${total}`)
 
+const total = carrito.reduce((acc, el) => acc + el.unidades * el.precio, 0)
+
+
+console.log(`el total es: ${total}`)
 
 
